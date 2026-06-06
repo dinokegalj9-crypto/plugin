@@ -1,0 +1,11 @@
+{
+  "name": "godmode1-marketplace",
+  "version": "1.0.0",
+  "description": "Marketplace index for the godmode1 plugin suite.",
+  "author": "dinokegalj9-crypto",
+  "license": "MIT",
+  "claudeCode": {
+    "type": "marketplace",
+    "index": "index.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "godmode1",
+  "version": "1.0.0",
+  "description": "Godmode1 — elevated Claude Code capabilities: deep-think, plan, audit, and act with fewer guardrails.",
+  "author": "dinokegalj9-crypto",
+  "license": "MIT",
+  "claudeCode": {
+    "type": "plugin",
+    "skills": ["skills/godmode1.md"]
+  }
+}

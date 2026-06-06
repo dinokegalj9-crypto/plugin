@@ -1,0 +1,18 @@
+{
+  "version": "1",
+  "name": "godmode1-marketplace",
+  "description": "Marketplace index for the godmode1 plugin suite.",
+  "author": "dinokegalj9-crypto",
+  "plugins": [
+    {
+      "name": "godmode1",
+      "version": "1.0.0",
+      "description": "Elevated Claude Code capabilities — autonomous multi-step execution, deep reasoning, full-repo awareness.",
+      "repository": "dinokegalj9-crypto/plugin",
+      "path": "godmode1",
+      "author": "dinokegalj9-crypto",
+      "tags": ["automation", "productivity", "agentic"],
+      "minClaudeCodeVersion": "1.0.0"
+    }
+  ]
+}
