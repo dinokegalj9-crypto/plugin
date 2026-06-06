@@ -1,0 +1,69 @@
+{
+  "$schema_note": "Per-project customization for godmode1. Copy this file to a project root and edit. Every command reads it; nothing is hardcoded to a language or stack.",
+
+  "project": {
+    "name": "UNNAMED_PROJECT",
+    "type": "auto",
+    "_type_options": "auto | web-frontend | backend-api | cli | library | mobile | data | infra | other",
+    "language": "auto",
+    "summary": "One-sentence description of what this project does and who it is for."
+  },
+
+  "stack": {
+    "runtime": "auto",
+    "package_manager": "auto",
+    "key_frameworks": []
+  },
+
+  "commands": {
+    "install": "auto",
+    "build": "auto",
+    "test": "auto",
+    "lint": "auto",
+    "typecheck": "auto",
+    "run": "auto",
+    "_note": "Set the real shell command for each, or leave 'auto' to let godmode1 detect from manifest files (package.json, pyproject.toml, Cargo.toml, go.mod, etc.)."
+  },
+
+  "workflow": {
+    "enabled_steps": [
+      "understand",
+      "plan",
+      "dependencies",
+      "execute",
+      "review",
+      "bug_hunt",
+      "optimize"
+    ],
+    "_note": "Remove steps to skip them. Order is fixed: optimize never runs before review passes.",
+    "strictness": "high",
+    "_strictness_options": "low (suggest) | medium (warn) | high (block on failed review)",
+    "require_plan_approval": true,
+    "max_files_per_change": 12,
+    "stop_on_first_failing_gate": true
+  },
+
+  "conventions": {
+    "style_guide": "Follow existing repo conventions; infer from neighbouring files before introducing new patterns.",
+    "test_required_for": ["new public functions", "bug fixes", "changed branching logic"],
+    "forbidden": ["committing secrets", "disabling tests to make CI pass", "broad try/except that swallows errors"]
+  },
+
+  "guardrails": {
+    "destructive_ops_need_confirmation": true,
+    "never_touch": [".env", "secrets/**", "**/*.pem", "node_modules/**", "dist/**", "build/**"],
+    "protected_branches": ["main", "master", "release/*"]
+  },
+
+  "review": {
+    "checklist": [
+      "Does each change map to a planned step?",
+      "Are edge cases and empty/null/boundary inputs handled?",
+      "Any unhandled error paths or silent failures?",
+      "Are new dependencies justified and pinned?",
+      "Did tests run and pass? Is new behaviour covered?",
+      "Any obvious performance or security regression?"
+    ],
+    "fail_loud": true
+  }
+}

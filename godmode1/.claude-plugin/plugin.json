@@ -1,0 +1,19 @@
+{
+  "name": "godmode1",
+  "version": "1.1.0",
+  "description": "A discipline-enforcing engineering workflow plugin. Turns the 7-step loop (understand -> plan -> dependencies -> execute -> review -> bug-hunt -> optimize) into slash commands and subagents. Project-agnostic; customized per repo via godmode.config.json.",
+  "author": {
+    "name": "Dino"
+  },
+  "keywords": [
+    "workflow",
+    "planning",
+    "code-review",
+    "discipline",
+    "general-purpose"
+  ],
+  "commands": "./commands",
+  "agents": "./agents",
+  "skills": "./skills",
+  "hooks": "./hooks/hooks.json"
+}

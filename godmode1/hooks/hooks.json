@@ -1,0 +1,16 @@
+{
+  "_note": "Optional safety hooks. Disabled-by-default examples; uncomment-by-moving into an active matcher set in your Claude Code settings. Adjust to your shell.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "grep -qiE 'rm -rf (/|~|\\.\\.)|git push .*(main|master)|:>[[:space:]]*\\.env' <<< \"$CLAUDE_TOOL_INPUT\" && { echo 'godmode1 guardrail: destructive or protected command blocked. Confirm manually.' >&2; exit 2; } || exit 0"
+          }
+        ]
+      }
+    ]
+  }
+}

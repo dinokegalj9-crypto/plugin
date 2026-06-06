@@ -1,0 +1,11 @@
+{
+  "name": "godmode1-marketplace",
+  "owner": { "name": "Dino" },
+  "plugins": [
+    {
+      "name": "godmode1",
+      "source": "../godmode1",
+      "description": "Disciplined 7-step engineering workflow plugin; project-agnostic, config-driven."
+    }
+  ]
+}
