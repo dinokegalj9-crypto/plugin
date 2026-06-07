@@ -3,15 +3,14 @@ set -e
 
 COMMANDS_DIR="$HOME/.claude/commands"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PLUGIN_DIR="$SCRIPT_DIR/godmode1"
 
 mkdir -p "$COMMANDS_DIR"
-
-for f in "$PLUGIN_DIR/commands/"*.md; do
-  name="$(basename "$f")"
-  cp "$f" "$COMMANDS_DIR/$name"
-  echo "installed: ~/.claude/commands/$name"
-done
-
+cp "$SCRIPT_DIR/godmode1/commands/godmode1.md" "$COMMANDS_DIR/godmode1.md"
+echo "installed: ~/.claude/commands/godmode1.md"
 echo ""
-echo "godmode1 installed. Restart Claude Code, then try /godmode-init in any project."
+echo "Restart Claude Code, then use /godmode1 in any project."
+echo "  /godmode1 init          — detect stack, write godmode.config.json"
+echo "  /godmode1 plan <task>   — plan only, no code written"
+echo "  /godmode1 review        — review + bug hunt"
+echo "  /godmode1 optimize      — cleanup pass (after tests pass)"
+echo "  /godmode1 <task>        — full 7-step loop"
